@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-
 import "./Counter.css";
+import DownvoteButton from "./Downvote";
+import UpvoteButton from "./Upvote";
 
 class Counter extends Component {
   constructor() {
@@ -15,9 +16,9 @@ class Counter extends Component {
   render() {
     return (
       <div id="main-counter">
-        <button onClick={this.decreaseCount}>+</button>
+        <DownvoteButton subtract={this.decreaseCount} />
         {this.state.count}
-        <button onClick={this.increaseCount}>-</button>
+        <UpvoteButton add={this.increaseCount}>+</UpvoteButton>
       </div>
     );
   }
